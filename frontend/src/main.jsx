@@ -7,7 +7,7 @@ import "./styles/header.scss";
 // import "./styles/login.scss";
 import "./styles/mediaquery.scss";
 
-export const server = "https://mytodos-skie.onrender.com/api/v1";
+export const server = "https://task-management-system-backend-rust.vercel.app";
 
 export const Context = createContext({isAuthenticated: false});
 
