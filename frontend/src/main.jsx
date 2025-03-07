@@ -1,32 +1,36 @@
-import React, {createContext, useState} from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 import "./styles/app.scss";
-import "./styles/features.scss";
-import "./styles/header.scss";
-// import "./styles/login.scss";
-import "./styles/mediaquery.scss";
-export const server = "https://task-management-system-backend-rust.vercel.app";
+import { createContext } from "react";
 
-export const Context = createContext({isAuthenticated: false});
+export const server = "https://nodejs-todoapp.onrender.com/api/v1";
 
-const AppWrapper = ()=>{
-  const [isAuthenticated,setIsAuthenticated] = useState(false);
-  const [loading,setLoading] = useState(false);
-  const [user,setUser] = useState({});
-  return(
-    <Context.Provider value={{
-      isAuthenticated,setIsAuthenticated,
-      loading,setLoading,
-      user,setUser
-      }}>
+export const Context = createContext({ isAuthenticated: false });
+
+const AppWrapper = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [user, setUser] = useState({});
+
+  return (
+    <Context.Provider
+      value={{
+        isAuthenticated,
+        setIsAuthenticated,
+        loading,
+        setLoading,
+        user,
+        setUser,
+      }}
+    >
       <App />
     </Context.Provider>
   );
 };
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AppWrapper />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
