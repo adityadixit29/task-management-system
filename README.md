@@ -1,35 +1,52 @@
-# Task Management System
-Deployed Link: https://task-management-system-frontend-two.vercel.app/
-## Installation
+# Task Management System  
 
-1. Clone the repository:
-   ```bash
- https://github.com/adityadixit29/task-management-system.git
-   ```
-2. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-3. Go to main.jsx file inside the src folder
-4. Change the server URL to:
-   ```bash
-    http://localhost:3000/api/v1
-   ```
-5. Then run the following command:
-   ```bash
-   npm run dev
-   ```
-6. Then go to the backend and create .env file in the backend folder
-7. Then add these variables to it
+**Deployed Link:** [Task Management System](https://task-management-system-frontend-two.vercel.app/)  
+
+## Installation  
+
+### 1. Clone the Repository  
+Run the following command to clone the repository:  
 ```bash
-PORT = 4000
-JWT_SECRET = dskfhdhkhsdkfh
-NODE_ENV =Development
-FRONTEND_URL = http://localhost:5173
-MONGO_URI = mongodb://localhost:27017
+git clone https://github.com/adityadixit29/task-management-system.git
 ```
-8. Then run the following command:
-   ```bash
-   npm start
-   ```
-9. Now as you are the new user you have to sign up first and then create your task
+
+### 2. Set Up the Frontend  
+Navigate to the frontend directory:  
+```bash
+cd frontend
+```
+Modify the server URL inside `main.jsx` (located in the `src` folder):  
+```js
+const SERVER_URL = "http://localhost:3000/api/v1";
+```
+Run the frontend development server:  
+```bash
+npm install
+npm run dev
+```
+
+### 3. Set Up the Backend  
+Navigate to the backend directory:  
+```bash
+cd backend
+```
+Create a `.env` file in the `backend` folder and add the following environment variables:  
+```env
+PORT=4000
+JWT_SECRET=dskfhdhkhsdkfh
+NODE_ENV=Development
+FRONTEND_URL=http://localhost:5173
+MONGO_URI=mongodb://localhost:27017
+```
+Install dependencies and start the backend server:  
+```bash
+npm install
+npm start
+```
+
+### 4. Usage  
+- As a new user, you need to **sign up** first.  
+- After signing in, you can **create and manage tasks**.
+
+---
+
