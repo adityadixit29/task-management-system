@@ -4,7 +4,7 @@ import App from "./App";
 import "./styles/app.scss";
 import { createContext } from "react";
 
-export const server = "https://task-management-system-backend-rust.vercel.app/api/v1";
+export const server = "https://mytodos-skie.onrender.com/api/v1";
 
 export const Context = createContext({ isAuthenticated: false });
 
