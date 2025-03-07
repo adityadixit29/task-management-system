@@ -1,5 +1,8 @@
 # Task Management System  
 
+**Disclaimer**
+This system relies on caching for optimal performance. Ensure that caching is enabled for proper functionality.*
+
 **Deployed Link:** [Task Management System](https://task-management-system-frontend-two.vercel.app/)  
 
 ## Installation  
@@ -17,7 +20,7 @@ cd frontend
 ```
 Modify the server URL inside `main.jsx` (located in the `src` folder):  
 ```js
-const SERVER_URL = "http://localhost:3000/api/v1";
+export const server = "https://mytodos-skie.onrender.com/api/v1";
 ```
 Run the frontend development server:  
 ```bash
